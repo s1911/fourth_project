@@ -1,5 +1,5 @@
 <!--main_ser.php-->
-<?php include './_header.html'; ?>
+<?php// include './_header.html'; ?>
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <script type="text/javascript" src="./js/main_ser_action.js"></script>
 
@@ -13,4 +13,4 @@
 	}
 </script>
 <div id="maintenance"></div>
-<?php include './_footer.html'; ?>
+<?php// include './_footer.html'; ?>

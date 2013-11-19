@@ -5,16 +5,17 @@
 <script type="text/javascript">
 	google.maps.event.addDomListener(window, 'load', initialize);
 </script>
+<div id="data-dialog"></div>
 <div id="container">
-	<div id="header"><h1><a href="./index.php">工業電腦視覺化監控管理系統</a></h1></div>
+	<div id="header"><h1><a href="./index.php">工業電腦視覺化管理系統</a></h1></div>
 	<div id="main">
 		<div id="menu">
 			<ul id="board-operation">
 				<li><a href="./add_board.html"><img src="./image/add.png" alt="add"></a></li>
 				<!--<li><a href="./delete_board.php"><img src="./image/delete.png" alt="delete"></li>-->
 			</ul>
-			<div id="board">
-				<table id='boards'>
+			<div id="board-menu">
+				<table id="boards">
 					<tr>
 						<th>Name</th>
 					</tr>

@@ -1,4 +1,11 @@
 $(function(){
+	$('#data-dialog').dialog({
+		autoOpen: false,
+		show: {	effect: 'fade'},
+		hide: {	effect: 'fade'},
+		height: 140,
+		modal: true
+	});
 	$('#board-operation a').click(function(e){
 		$('#content').hide().load($(this).attr('href'), function(){
 			$('#content').show();
