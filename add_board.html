@@ -1,0 +1,58 @@
+<script type="text/javascript">
+	function checkForm() {
+		if (document.addBoard.bname.value == "") {
+			alert("請輸入主機名稱");
+			document.addBoard.bname.focus();
+			return false;
+		}
+		if (document.addBoard.location_x.value == "") {
+			alert("請輸入經度");
+			document.addBoard.location_x.focus();
+			return false;
+		}
+		if (document.addBoard.location_y.value == "") {
+			alert("請輸入緯度");
+			document.addBoard.location_y.focus();
+			return false;
+		}
+		if (document.addBoard.ip.value == "") {
+			alert("請輸入IP");
+			document.addBoard.ip.focus();
+			return false;
+		}
+		return confirm("確定資料無誤？");
+	}
+</script>
+
+<div id="add-board">
+	<form action="./model/insert_board.php" method="post" name="addBoard" onSubmit=" checkForm();">
+		<legend>新增主機</legend>
+		<p><span class="error">* 為必填</span></p>
+		<table>
+			<tr>
+				<td><span class="error">* </span><label for="board-name">主機名稱</label></td>
+				<td><input type="text" id="board-name" class="form-control" name="bname" /></td>
+			</tr>
+			<tr>
+				<td><span class="error">* </span><label for="location-x">經度</label></td>
+				<td><input type="text" id="location-x" class="form-control" name="location_x" /></td>
+			</tr>
+			<tr>
+				<td><span class="error">* </span><label for="location-y">緯度</label></td>
+				<td><input type="text" id="location-y" class="form-control" name="location_y" /></td>
+			</tr>
+			<tr>
+				<td><span class="error">* </span><label for="ip">IP</label></td>
+				<td><input type="text" id="ip" class="form-control" name="ip" /></td>
+			</tr>
+			<tr>
+				<td><label for="note">備註</label></td>
+				<td><input type="text" id="note" class="form-control" name="note"/></td>
+			</tr>
+			<tr>
+				<td><input class="button" type='submit' value='Submit' /></td>
+				<td><input class="button" type='reset' value='Reset' /></td>
+			</tr>
+		</table>
+	</form>
+</div>
