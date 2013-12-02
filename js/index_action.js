@@ -6,7 +6,8 @@ $(function(){
 		height: 140,
 		modal: true
 	});
-	$('#board-operation a').click(function(e){
+	//$('#board-operation a').click(function(e){
+	$('#menu a').click(function(e){
 		$('#content').hide().load($(this).attr('href'), function(){
 			$('#content').show();
 		});
