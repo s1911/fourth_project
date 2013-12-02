@@ -12,7 +12,7 @@
 		<div id="menu">
 			<ul id="board-operation">
 				<li><a href="./add_board.html"><img src="./image/add.png" alt="add"></a></li>
-				<!--<li><a href="./delete_board.php"><img src="./image/delete.png" alt="delete"></li>-->
+				<li><a href="./edit_board.php?bid=1"><img src="./image/edit.png" alt="edit"></a></li>
 			</ul>
 			<div id="board-menu">
 				<table id="boards">

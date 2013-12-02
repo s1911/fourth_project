@@ -1,8 +1,8 @@
 <?php
-	if (isset($_POST['bname'])) {
+	if (isset($_POST['board_name']) && ($_POST['board_name']!='')) {
 		require_once('./mysql_connect.php');
 
-		$bname	= $_POST['bname'];
+		$bname	= $_POST['board_name'];
 		$loc_x	= $_POST['location_x'];
 		$loc_y	= $_POST['location_y'];
 		$ip		= $_POST['ip'];
@@ -13,6 +13,7 @@
 		//echo '<meta http-equiv=REFRESH CONTENT=1; url=index.php>';
 		
 		$db = NULL;
+		
+		header("location: ../");
 	}
-	header("location: ../");
 ?>

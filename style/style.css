@@ -164,18 +164,20 @@ div { display:block; }
 	width: 80px;
 	height: 35px;
 	background: #B8E356;
-	border-top-right-radius:12px;
-	border-bottom-right-radius:12px;
-	border-bottom-left-radius:12px;
+	border: none;
+	border-top-right-radius: 12px;
+	border-bottom-right-radius: 12px;
+	border-bottom-left-radius: 12px;
 	color: #FFFFFF;
 	font-size: 15px;
-	font-weight: bold;
-	text-decoration: none;
 	text-align: center;
+	font-weight: bold;
 	text-shadow: 1px 1px 0px #86AE47;
 }
 .button:hover { background: #A5CC52; }
 .button:active { position: relative; top: 1px; }
+
+.error { color: #FF0000; }
 
 .form-control {
 	display: block;

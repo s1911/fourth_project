@@ -1,37 +1,12 @@
-<script type="text/javascript">
-	function checkForm() {
-		if (document.addBoard.bname.value == "") {
-			alert("請輸入主機名稱");
-			document.addBoard.bname.focus();
-			return false;
-		}
-		if (document.addBoard.location_x.value == "") {
-			alert("請輸入經度");
-			document.addBoard.location_x.focus();
-			return false;
-		}
-		if (document.addBoard.location_y.value == "") {
-			alert("請輸入緯度");
-			document.addBoard.location_y.focus();
-			return false;
-		}
-		if (document.addBoard.ip.value == "") {
-			alert("請輸入IP");
-			document.addBoard.ip.focus();
-			return false;
-		}
-		return confirm("確定資料無誤？");
-	}
-</script>
-
+<script type="text/javascript" src="./js/board_setting.js"></script>
 <div id="add-board">
-	<form action="./model/insert_board.php" method="post" name="addBoard" onSubmit=" checkForm();">
+	<form action="./model/insert_board.php" method="post" name="addBoard" onSubmit="return checkForm();">
 		<legend>新增主機</legend>
 		<p><span class="error">* 為必填</span></p>
 		<table>
 			<tr>
 				<td><span class="error">* </span><label for="board-name">主機名稱</label></td>
-				<td><input type="text" id="board-name" class="form-control" name="bname" /></td>
+				<td><input type="text" id="board-name" class="form-control" name="board_name" /></td>
 			</tr>
 			<tr>
 				<td><span class="error">* </span><label for="location-x">經度</label></td>

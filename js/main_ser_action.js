@@ -35,12 +35,11 @@ function drawChart(component_info){
 	//https://developers.google.com/chart/interactive/docs/datatables_dataviews
 	graphData.addColumn('datetime', 'time');
 	graphData.addColumn('number', 'LifeTime');
-	graphData.addColumn('number', 'DeploymentTime');
-				
+
 	for(var i=0;i<component_info.length;++i)
-		graphData.addRows([[ new Date(component_info[i]['save_t']), parseInt(component_info[i]['life_t']), parseInt(component_info[i]['deployment_t']) ]]);
+		graphData.addRows([[ new Date(component_info[i]['save_t']), parseInt(component_info[i]['life_t']) ]]);
 				
-	var options = { title: component_info[0]['cname']};
+	//var options = { title: component_info[0]['cname']};
 	var chart = new google.visualization.LineChart(document.getElementById(component_info[0]['cname']));
 	chart.draw(graphData);
 }
